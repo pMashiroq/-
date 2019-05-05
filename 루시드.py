@@ -1,4 +1,6 @@
 import discord
+import os
+
 
 client = discord.Client()
 
@@ -62,4 +64,6 @@ async def on_message(message):
     if message.content.startswith("!도전장"):
         await message.channel.send("도전장 이라고여? 하하하 악몽의 가장 깊은 곳에서 당신을 기다릴게요")
 
-client.run("NTczNDg4MTE5OTY2MzM0OTc5.XM0oQg.2YSDTCpeLhFIJTi84VeefYNu-Xs")
+
+access_token = os. environ["BOT_TOKEN"]
+client.run(access_token)
